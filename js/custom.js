@@ -1,14 +1,14 @@
 // 滑动特效
 $(function() {
-	$("#featured .item").hover(function(){
-		$(this).find(".boxCaption").stop().animate({
-			top:0
-		}, 150);
-		}, function(){
-		$(this).find(".boxCaption").stop().animate({
-			top:160
-		}, 600);
-	});
+    $("#featured .item").hover(function(){
+        $(this).find(".boxCaption").stop().animate({
+            top:0
+        }, 150);
+        }, function(){
+        $(this).find(".boxCaption").stop().animate({
+            top:160
+        }, 600);
+    });
 });
 // 滚屏
 jQuery(document).ready(function($){
@@ -19,24 +19,24 @@ $('.scroll_b').click(function(){$('html,body').animate({scrollTop:$('.footer_bot
 // context
 $(document).ready(function(){
 $('.entry_box_s ').hover(
-	function() {
-		$(this).find('.context_t').stop(true,true).fadeIn();
-	},
-	function() {
-		$(this).find('.context_t').stop(true,true).fadeOut();
-	}
+    function() {
+        $(this).find('.context_t').stop(true,true).fadeIn();
+    },
+    function() {
+        $(this).find('.context_t').stop(true,true).fadeOut();
+    }
 );
 });
 
 // 头像
 $(document).ready(function(){
 $('#respond').hover(
-	function() {
-		$(this).find('.set_avatar').stop(true,true).fadeIn();
-	},
-	function() {
-		$(this).find('.set_avatar').stop(true,true).fadeOut();
-	}
+    function() {
+        $(this).find('.set_avatar').stop(true,true).fadeIn();
+    },
+    function() {
+        $(this).find('.set_avatar').stop(true,true).fadeOut();
+    }
 );
 });
 
@@ -44,9 +44,9 @@ $('#respond').hover(
 function copy_code(text) {
   if (window.clipboardData) {
     window.clipboardData.setData("Text", text)
-	alert("已经成功将原文链接复制到剪贴板！");
+    alert("已经成功将原文链接复制到剪贴板！");
   } else {
-	var x=prompt('你的浏览器可能不能正常复制\n请您手动进行：',text);
+    var x=prompt('你的浏览器可能不能正常复制\n请您手动进行：',text);
   }
 }
 
@@ -113,13 +113,13 @@ window.location = $(this).attr('href');
 //引用
 $(function(){
     $("h4.backs").bind("click",function(){
-	    var $content = $(this).next("div.track");
-	    if($content.is(":visible")){
-			$content.hide("200");
-		}else{
-			$content.show("200");
-		}
-	})
+        var $content = $(this).next("div.track");
+        if($content.is(":visible")){
+            $content.hide("200");
+        }else{
+            $content.show("200");
+        }
+    })
 })
 
 //提示

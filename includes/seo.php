@@ -8,25 +8,25 @@
 <?php if ( is_author() ) {?><title><?php wp_title('');?>发表的所有文章 | <?php bloginfo('name'); ?></title><?php }?>
 <?php
 if (!function_exists('utf8Substr')) {
- function utf8Substr($str, $from, $len)
- {
-     return preg_replace('#^(?:[\x00-\x7F]|[\xC0-\xFF][\x80-\xBF]+){0,'.$from.'}'.
-          '((?:[\x00-\x7F]|[\xC0-\xFF][\x80-\xBF]+){0,'.$len.'}).*#s',
-          '$1',$str);
- }
+    function utf8Substr($str, $from, $len)
+    {
+        return preg_replace('#^(?:[\x00-\x7F]|[\xC0-\xFF][\x80-\xBF]+){0,'.$from.'}'.
+        '((?:[\x00-\x7F]|[\xC0-\xFF][\x80-\xBF]+){0,'.$len.'}).*#s',
+        '$1',$str);
+    }
 }
 if ( is_single() ){
     if ($post->post_excerpt) {
         $description  = $post->post_excerpt;
     } else {
-   if(preg_match('/<p>(.*)<\/p>/iU',trim(strip_tags($post->post_content,"<p>")),$result)){
-    $post_content = $result['1'];
-   } else {
-    $post_content_r = explode("\n",trim(strip_tags($post->post_content)));
-    $post_content = $post_content_r['0'];
-   }
-         $description = utf8Substr($post_content,0,220);  
-  } 
+        if(preg_match('/<p>(.*)<\/p>/iU',trim(strip_tags($post->post_content,"<p>")),$result)){
+            $post_content = $result['1'];
+        } else {
+            $post_content_r = explode("\n",trim(strip_tags($post->post_content)));
+            $post_content = $post_content_r['0'];
+        }
+        $description = utf8Substr($post_content,0,220);  
+    } 
     $keywords = "";     
     $tags = wp_get_post_tags($post->ID);
     foreach ($tags as $tag ) {

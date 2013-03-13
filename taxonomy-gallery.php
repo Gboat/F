@@ -13,15 +13,8 @@
          </div>
          <!-- 截图 -->
          <div class="thumbnail_hot">
-            <?php 
-             if ( has_post_thumbnail()) {
-               $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
-               echo '<a class="cboxElement" href="' . $large_image_url[0] . '" rel="example4" title="' . the_title_attribute('echo=0') . '" >';
-               the_post_thumbnail('hot');
-               echo '</a>';
-             }
-             ?>
-            <?php endif; ?>
+         <?php include('includes/thumbnail_img.php'); ?>
+         <?php endif; ?>
          </div>
          <?php $img = get_post_meta($post->ID, 'big', true); ?>
          <div class="zoom"><a class="cboxElement" href="<?php echo $img; ?>" rel="example4" title="<?php the_title_attribute(); ?>"></a></div>
