@@ -10,7 +10,6 @@ Template Name: 读者墙
          <div class="browse">现在位置 ＞<a title="返回首页" href="<?php echo get_settings('Home'); ?>/">首页</a> ＞<?php the_title(); ?></div>
       </div>
       <div id="map_r">
-         <div id="feed"><a href="<?php echo get_option('swt_rsssub'); ?>" title="RSS">RSS</a></div>
       </div>
    </div>
    <div class="clear"></div>

@@ -17,7 +17,6 @@
       </div>
       </div>
       <div id="map_r">
-         <div id="feed"><a href="<?php echo get_option('swt_rsssub'); ?>" title="RSS">RSS</a></div>
       </div>
    </div>
    <!-- end: menu -->

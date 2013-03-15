@@ -5,7 +5,6 @@
     <!-- menu -->
       <div id="map">
          <div class="browse">现在的位置: <a title="返回首页" href="<?php echo get_settings('Home'); ?>/">首页</a> ＞<?php echo get_the_term_list($post->ID,  'videos', '', ', ', ''); ?>＞正文<!-- <?php the_title();?> --></div>
-         <div id="feed"><a href="<?php echo get_option('swt_rsssub'); ?>" title="RSS">RSS</a></div>
       </div>
       <!-- end: menu -->
       <div class="entry_box_s">
